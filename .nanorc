@@ -1,0 +1,57 @@
+########################################
+## Nano - Dracula (PowerShell-optimerad)
+########################################
+
+include "/usr/share/nano/*.nanorc"
+
+## Beteende
+set linenumbers
+set constantshow
+set softwrap
+set atblanks
+set autoindent
+set indicator
+set tabsize 3
+set tabstospaces
+set trimblanks
+set quickblank
+set historylog
+set positionlog
+
+## Navigation
+set smarthome
+set multibuffer
+set mouse
+
+## UI / Dracula-inspirerat (anpassat för Windows färgpalett)
+set titlecolor      brightwhite,blue
+set statuscolor     brightwhite,black
+set promptcolor     brightmagenta,black
+set errorcolor      brightwhite,red
+
+## Markering – “Dracula selection” känsla
+set selectedcolor   brightwhite,magenta
+
+## Radnummer & funktionstexter
+set numbercolor     brightcyan,black
+set keycolor        brightyellow,black
+set functioncolor   brightgreen,black
+
+## Stripes – diskret
+set stripecolor     ,black
+
+########################################
+## Globala markeringar (fungerar i Nano 8.4)
+########################################
+
+## Trailing spaces
+#extendsyntax ".*" color brightred " +$"
+
+## TODO / FIX / NOTE / HACK
+#extendsyntax ".*" color brightcyan "(TODO|FIXME|NOTE|HACK)(:)?"
+
+## Markera långa rader >120 tecken
+#extendsyntax ".*" color brightyellow "^(.*){121,}$"
+
+## Markera indrag (eftersom du kör tabstospaces)
+#extendsyntax ".*" color brightmagenta "^[ ]+"
